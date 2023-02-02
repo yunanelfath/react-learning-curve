@@ -6,7 +6,7 @@ npm start
 ## Learning curve
 
 react router
-styling override
 local state
 reusable component
+styling override
 global state (context, redux)
