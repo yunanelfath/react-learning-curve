@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { routerPath } from "../router/Routerlist";
 
 const Homepage = () => {
-  let [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     console.log("something triggered from state count: " + count);
