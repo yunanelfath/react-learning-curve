@@ -1,4 +1,7 @@
 export const routerPath = {
   homepage: "/",
-  signup: "/signup"
+  signup: "/signup",
+  profile: "/profile",
+  blog: "/blog",
+  aboutme: "/aboutme",
 }
