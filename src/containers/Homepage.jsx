@@ -9,18 +9,16 @@ const Homepage = () => {
     console.log("something triggered from state count: " + count);
   }, [count]);
 
+  const onClickAdd = () => {
+    setCount(count + 1);
+  };
+
   return (
     <>
       <div>this is homepage</div>
       <Link to={routerPath.signup}>Click here to signup</Link>
       <div style={{ marginTop: 30 }}>{count}</div>
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        Add
-      </button>
+      <button onClick={onClickAdd}>Add</button>
       <button
         onClick={() => {
           setCount(count - 1);
