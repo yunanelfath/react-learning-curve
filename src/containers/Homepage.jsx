@@ -4,6 +4,7 @@ import { routerPath } from "../router/Routerlist";
 
 const Homepage = () => {
   const [count, setCount] = useState(0);
+  const [fibo, setFibo]   = useState(0);
 
   useEffect(() => {
     console.log("something triggered from state count: " + count);
@@ -18,8 +19,16 @@ const Homepage = () => {
   }
 
   const onClickFibo = () => {
-    if(count === 0) {count = 1};
-    setCount(count + count);
+    let a = [];
+    for(let i=0; i<15; i++){
+      if(i < 2){
+        a.push(i);
+      }else{
+        let b = (a[i-1] + a[i-2])
+        a.push(b);
+      }
+    }
+    setFibo(a+',');
   }
 
   return (
@@ -32,7 +41,8 @@ const Homepage = () => {
       <div style={{ marginTop: 30 }}>{count}</div>
       <button onClick={onClickAdd}>Add</button>
       <button onClick={onClickMin}>Min</button>
-      <button onClick={onClickFibo}>Fibonaci</button>
+      <button onClick={onClickFibo}>Fibonacci</button>
+      <div style={{marginTop: 10}}>{fibo}</div>
     </>
   );
 };
